@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+    Caladetect - Détecteur de couleurs sur les images
+    </title>
+    <meta name="description" content="Détecter les couleurs sur vos images rapidement">
+    <meta name="keywords" content="github, git, detect, color, image, repository,caladetect,emmadiblo,uwizeyimana emmanuel,emmanuel uwizeyimana,emmanuel,burundi,birastat,editovcard,numedev,gitarchive,editomark,chronex,emmadiblo uwizeyimana,emmadiblouwizeyimana,html,css,js,javascript">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+        <script src="caladetect.js"></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+
+    <div class="header">
+        <img src="favicon.svg" alt="calaDetect logo" height="50px" width="40px"> <h1 class="title">Caladetect <span class="highlight">!</span></h1>
+    </div>
+    
+    <h1>Détecteur de couleurs sur l'image</h1>
+
+    <div class="container">
+        <div class="controls">
+            <div class="tabs">
+                <button class="tab active" data-tab="upload">Upload Image</button>
+                <button class="tab" data-tab="url">URL Image</button>
+            </div>
+
+            <div class="tab-content active" id="upload-content">
+                <div class="drop-area" id="dropArea"> 
+                </div>
+            </div>
+
+            <div class="tab-content" id="url-content">
+                <div class="input-group">
+                    <label for="imageUrl">Utiliser l'URL de l'image :</label>
+                    <input type="url" id="imageUrl" placeholder="https://exemple.com/image.jpg">
+                    <button class="btn" onclick="processImageUrl()">Analyser</button>
+                </div>
+            </div>
+
+            <div class="input-group" id="colorCountGroup" style="display: none;">
+                <label for="colorCount">Nombre de couleurs à détecter :</label>
+                <button class="btn" onclick="moins()">-</button>
+                <input type="number" id="colorCount" min="2" max="20" value="6">
+                <button class="btn" onclick="plus()">+</button>
+            </div>
+        </div>
+
+        <img id="previewImage" class="preview-image" alt="Aperçu" crossorigin="anonymous">
+        <div id="status"></div>
+        <div id="colorsContainer" class="colors-container"></div>
+    </div>
+    <div class="copy-feedback" id="copyFeedback">Couleur copiée !</div>
+
+    <div class="footer">
+        <div>
+            
+
+            <div class="copy">&copy;                  
+                <script>
+                document.write(new Date().getFullYear());
+            </script> calaDetect</div>
+            
+            <div class="tools">Autres outils: <a href="https://emmadiblo.github.io/editovcard">Editovcard</a>, <a href="https://emmadiblo.github.io/editomark">Editomark</a> ,
+            <a href="https://emmadiblo.github.io/gitArchive">GitArchive</a>
+            </div>
+        </div>
+        <div>
+            <ul class="socials">
+                <li><a href="https://linkedin.com/in/emmadiblouwizeyimana"><img src="assets/linkedin.svg" alt="LinkedIn"></a></li>
+                <li><a href="https://facebook.com/emmadiblouwizeyimana"><img src="assets/facebook.svg" alt="Facebook"></a></li>
+                <li><a href="https://github.com/emmadiblo"><img src="assets/github.svg" alt="GitHub"></a></li>
+                <li><a href="mailto:emmadiblouwizeyimana@gmail.com"><img src="assets/gmail.svg" alt="Gmail"></a></li>
+            </ul>
+        </div>
+
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
